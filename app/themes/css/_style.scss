@@ -1,0 +1,227 @@
+
+html,
+body {
+  
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+#screen {
+  height: 100vh;
+}
+
+#screen:after {
+  animation: grain 8s steps(10) infinite;
+  background-image: url(../img/noise.png);
+  content: "";
+  height: 300%;
+  left: -50%;
+  opacity: 0.5;
+  position: fixed;
+  top: -110%;
+  width: 300%;
+}
+
+.scanline {
+  width: 100%;
+  height: 100px;
+  z-index: 8;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.2) 10%, rgba(0, 0, 0, 0.1) 100%);
+  opacity: 0.4;
+  position: absolute;
+  bottom: 100%;
+  animation: scanline 10s linear infinite;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Change Theme */
+.themes {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.themes ul li {
+  display: inline-block;
+  color: #54e16b;
+  font-family: "VT323";
+  font-size: 24px;
+}
+
+.themes ul li a {
+  color: rgb(1, 199, 27);
+  font-family: "VT323";
+  font-size: 24px;
+  text-decoration: none;
+  padding-left: 1em;
+  cursor: pointer;
+}
+
+
+
+
+/* ! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/* class a moi */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.block {
+	position: relative;
+	margin: 300px auto 0;
+	width: 400px;
+	height: auto;
+  background: linear-gradient(0deg, #000, #272727);
+}
+
+.block:before, .block:after {
+	content: '';
+	position: absolute;
+	left: -2px;
+	top: -2px;
+	background: linear-gradient(45deg, #00fb2180, #00ff62, #00ff00,#142e1a, #88ff003a, #00fb60, 
+		#00ff4c, #00ff00,#08290d73, rgb(0, 255, 76));
+	background-size: 600%;
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	z-index: -1;
+	animation: steam 100s linear infinite;
+}
+
+@keyframes steam {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 400% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+
+.block:after {
+	filter: blur(50px);
+}
+
+
+/* https://css-tricks.com/snippets/css/animated-grainy-texture/ */
+@keyframes grain {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  10% {
+    transform: translate(-5%, -10%);
+  }
+
+  20% {
+    transform: translate(-15%, 5%);
+  }
+
+  30% {
+    transform: translate(7%, -25%);
+  }
+
+  40% {
+    transform: translate(-5%, 25%);
+  }
+
+  50% {
+    transform: translate(-15%, 10%);
+  }
+
+  60% {
+    transform: translate(15%, 0%);
+  }
+
+  70% {
+    transform: translate(0%, 15%);
+  }
+
+  80% {
+    transform: translate(3%, 35%);
+  }
+
+  90% {
+    transform: translate(-10%, 10%);
+  }
+}
+
+/* https://dev.to/ekeijl/retro-crt-terminal-screen-in-css-js-4afh */
+@keyframes scanline {
+  0% {
+    bottom: 100%;
+  }
+
+  80% {
+    bottom: 100%;
+  }
+
+  100% {
+    bottom: 0%;
+  }
+}

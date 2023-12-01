@@ -1,4 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {}
 
-module.exports = nextConfig
+
+// next.config.js
+module.exports = {
+    nextConfig,
+    images: {
+       
+        domains: ['secure.gravatar.com',
+        'css-tricks.com',
+        
+    ],
+    },
+}

@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "@/page": ["./page.jsx"],
+      "@/cards": ["./experience/cards/cards.jsx"]
     }
   }
 }
